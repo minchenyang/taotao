@@ -1,5 +1,6 @@
 package com.taotao.controller;
 
+import com.taotao.common.pojo.TaotaoResult;
 import com.taotao.pojo.EUDataGridResult;
 import com.taotao.pojo.TbItem;
 import com.taotao.service.ItemService;
@@ -33,5 +34,13 @@ public class ItemController {
     public EUDataGridResult getItemList(Integer page, Integer rows) {
         EUDataGridResult result = itemService.getItemList(page, rows);
         return result;
+    }
+
+    @RequestMapping("/item/save")
+    @ResponseBody
+    public TaotaoResult saveItem(TbItem item, String desc) throws Exception {
+        //添加商品信息
+        itemService.saveItem(item, desc, null);
+        return TaotaoResult.ok();
     }
 }

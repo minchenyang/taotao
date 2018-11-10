@@ -1,15 +1,9 @@
-/*
 package com.taotao.common.pojo;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.util.List;
-
-*/
-/**
- * 淘淘商城自定义响应结构
- *//*
 
 public class TaotaoResult {
 
@@ -57,10 +51,6 @@ public class TaotaoResult {
         this.data = data;
     }
 
-//    public Boolean isOK() {
-//        return this.status == 200;
-//    }
-
     public Integer getStatus() {
         return status;
     }
@@ -85,14 +75,6 @@ public class TaotaoResult {
         this.data = data;
     }
 
-    */
-/**
-     * 将json结果集转化为TaotaoResult对象
-     * 
-     * @param jsonData json数据
-     * @param clazz TaotaoResult中的object类型
-     * @return
-     *//*
 
     public static TaotaoResult formatToPojo(String jsonData, Class<?> clazz) {
         try {
@@ -115,13 +97,6 @@ public class TaotaoResult {
         }
     }
 
-    */
-/**
-     * 没有object对象的转化
-     * 
-     * @param json
-     * @return
-     *//*
 
     public static TaotaoResult format(String json) {
         try {
@@ -132,14 +107,6 @@ public class TaotaoResult {
         return null;
     }
 
-    */
-/**
-     * Object是集合转化
-     * 
-     * @param jsonData json数据
-     * @param clazz 集合中的类型
-     * @return
-     *//*
 
     public static TaotaoResult formatToList(String jsonData, Class<?> clazz) {
         try {
@@ -157,4 +124,3 @@ public class TaotaoResult {
     }
 
 }
-*/
